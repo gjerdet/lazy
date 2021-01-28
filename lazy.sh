@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="1"
+version="2"
 #some variables
 DEFAULT_ROUTE=$(ip route show default | awk '/default/ {print $3}')
 IFACE=$(ip route show | awk '(NR == 2) {print $3}')
@@ -34,7 +34,7 @@ fi
 ### End of install process
 
 ### Check for updates !
-if [[ "$silent" = "1" ]];then
+if [[ "$silent" = "2" ]];then
 	echo "Not checking for a new version : silent mode."
 else
 	changelog=$(curl --silent -q https://www.dropbox.com/s/3873zkaljg237ws/changelog?dl=0)
