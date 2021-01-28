@@ -46,7 +46,7 @@ $changelog"
 		read update
 		if [[ $update = Y || $update = y ]];then
 			echo "[+] Updating script..."
-			wget -q https://www.dropbox.com/s/wznkb30ownkzpm3/lazy.sh?dl=0 -O $0
+			wget -q https://www.dropbox.com/s/wznkb30ownkzpm3/lazy.sh?dl=0 $0
 			chmod +x $0
 			echo "[-] Script updated !"
 			if [[ $0 != '/usr/bin/yamas' && $ask_for_install = 'y' ]];then
